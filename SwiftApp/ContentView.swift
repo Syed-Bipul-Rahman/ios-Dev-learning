@@ -16,9 +16,8 @@ struct ContentView: View {
             Image("imagevai")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 200, height: 200)
-                            .cornerRadius(100)
-                            .padding()
+                            .frame(width: 150, height: 50)
+                        
             
             Image(systemName: "cloud.sun")
                 .font(.system(size: 100))
@@ -43,6 +42,16 @@ struct ContentView: View {
                 .onTapGesture {
                     self.isTapped2.toggle()
                 }
+        
+        Circle().fill(.blue)
+        Circle()
+            .fill(.blue)
+            .padding()
+            .overlay(
+                Image(systemName: "figure.archery")
+                    .font(.system(size: 35))
+                    .foregroundColor(.white)
+            )
     }
 }
 
