@@ -39,15 +39,17 @@ struct SecondView: View {
 //                .buttonStyle(.borderedProminent)
                 
                 
-                Button("Try again") {
-                    withAnimation(.easeInOut(duration: 1)) {
-                        selected = activities.randomElement() ?? "Archery"
-                        id += 1
-                    }
-                }
-                .buttonStyle(.borderedProminent)
+         
+            }
+        }.transition(.slide)
+            .id(id)
+        Button("Try again") {
+            withAnimation(.easeInOut(duration: 1)) {
+                selected = activities.randomElement() ?? "Archery"
+                id += 1
             }
         }
+        .buttonStyle(.borderedProminent)
     }
 }
 
